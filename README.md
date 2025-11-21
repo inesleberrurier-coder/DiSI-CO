@@ -1,26 +1,137 @@
 <meta charset="UTF-8">
 <title>🎄 Calendrier de l'Avent 🎄</title>
 <style>
-font-family: Arial, sans-serif; background: #064E3B; color: #fff; text-align: center; margin:0; padding:20px; overflow: hidden; }
-  h1 { margin-top: 0; font-size: 44px; color: #FFD700; text-shadow: 3px 3px 6px #000; }
-  .calendar { display: grid; grid-template-columns: repeat(6, 150px); gap: 15px; justify-content: center; margin: 20px auto; max-width: 960px; }
-  .day { background: #e63946; width:150px; height:150px; cursor: pointer; font-weight: bold; color: #fff; text-shadow: 1px 1px 2px #000; box-shadow: 0 6px 12px rgba(0,0,0,0.5); display:flex; align-items:center; justify-content:center; font-size:28px; position: relative; }
-  .day::before { content:'🎀'; position:absolute; top:5px; left:5px; font-size:20px; }
-  .popup { display:none; position: fixed; z-index: 9999; left:50%; top:50%; transform: translate(-50%,-50%); background:#fff4d9; color:#000; padding:22px; border-radius:12px; width:420px; max-height:80vh; overflow:auto; box-shadow: 0 12px 30px rgba(0,0,0,0.5); }
-  .close { margin-top:12px; background:#e63946; color:#fff; border:none; padding:8px 12px; border-radius:6px; cursor:pointer; }
-  input[type='text']{padding:6px; width:70%;}
-  a{ color:#064E3B; font-weight:bold; }
-  .popupSnowflake{position:absolute; top:-10px; color:white; user-select:none; pointer-events:none; font-size:14px; animation:fallPopup 6s linear infinite;}
-  @keyframes fallPopup{0%{transform:translateY(-10px)}100%{transform:translateY(300px)}}
-  .snowflake{position:fixed; top:-10px; color:white; user-select:none; pointer-events:none; z-index:1; font-size:16px; animation:fallBackground 8s linear infinite;}
-  @keyframes fallBackground{0%{transform:translateY(-10px)}100%{transform:translateY(110vh)}}
+body {
+  font-family: Arial, sans-serif;
+  background: #064E3B;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  overflow: hidden;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 44px;
+  color: #FFD700;
+  text-shadow: 3px 3px 6px #000;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(6, 150px);
+  gap: 15px;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 960px;
+}
+
+@media (max-width: 800px) {
+  .calendar { grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 500px) {
+  .calendar { grid-template-columns: repeat(2, 1fr); }
+}
+
+.day {
+  background: #e63946;
+  width:150px;
+  height:150px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 2px #000;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.5);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  position: relative;
+}
+
+.day::before {
+  content:'🎀';
+  position:absolute;
+  top:5px;
+  left:5px;
+  font-size:20px;
+}
+
+.popup {
+  display:none;
+  position: fixed;
+  z-index: 9999;
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+  background:#fff4d9;
+  color:#000;
+  padding:22px;
+  border-radius:12px;
+  width:420px;
+  max-height:80vh;
+  overflow:auto;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+}
+
+.close {
+  margin-top:12px;
+  background:#e63946;
+  color:#fff;
+  border:none;
+  padding:8px 12px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+input[type='text'] {
+  padding:6px;
+  width:70%;
+}
+
+a {
+  color:#064E3B;
+  font-weight:bold;
+}
+
+.popupSnowflake {
+  position:absolute;
+  top:-10px;
+  color:white;
+  user-select:none;
+  pointer-events:none;
+  font-size:14px;
+  animation:fallPopup 6s linear infinite;
+}
+
+@keyframes fallPopup {
+  0%{transform:translateY(-10px)}
+  100%{transform:translateY(300px)}
+}
+
+.snowflake {
+  position:fixed;
+  top:-10px;
+  color:white;
+  user-select:none;
+  pointer-events:none;
+  z-index:1;
+  font-size:16px;
+  animation:fallBackground 8s linear infinite;
+}
+
+@keyframes fallBackground {
+  0%{transform:translateY(-10px)}
+  100%{transform:translateY(110vh)}
+}
 </style>
+</head>
+<body>
 
 <h1>🎄 Calendrier de l'Avent 🎄</h1>
 
-<div class="calendar" id="calendar">
-  <!-- Les cases seront générées automatiquement -->
-</div>
+<div class="calendar" id="calendar"></div>
 
 <div id="popup" class="popup">
   <div id="popupContent"></div>
@@ -40,7 +151,7 @@ for(let i=1;i<=24;i++){
 
 // Animation neige
 (function(){
-  const count=80;
+  const count=50; // moins de flocons pour fluidité
   for(let i=0;i<count;i++){
     const el=document.createElement('div');
     el.className='snowflake';
@@ -53,29 +164,22 @@ for(let i=1;i<=24;i++){
   }
 })();
 
-// Fonction ouvrir popup avec contrôle du jour
+// Fonction ouvrir popup (toutes les cases ouvertes)
 function openPopup(day){
-  const today = new Date();
-  const month = today.getMonth(); // 0 = Janvier
-  const date = today.getDate();
+  const box = document.getElementById('popupContent');
+  box.innerHTML = '';
 
-  if(month !== 11 || day > date){
-    alert("Cette case n'est pas encore disponible !");
-    return;
-  }
-
-  const box=document.getElementById('popupContent');
-  box.innerHTML='';
+  // Flocons dans le popup
   for(let i=0;i<30;i++){
-    const f=document.createElement('div');
-    f.className='popupSnowflake';
-    f.textContent='❄';
-    f.style.left=Math.random()*380+'px';
-    f.style.animationDuration=4+Math.random()*4+'s';
+    const f = document.createElement('div');
+    f.className = 'popupSnowflake';
+    f.textContent = '❄';
+    f.style.left = Math.random() * 380 + 'px';
+    f.style.animationDuration = 4 + Math.random() * 4 + 's';
     box.appendChild(f);
   }
 
-  // Contenus complets par jour
+  // Contenus par jour
   switch(day){
     case 1: box.innerHTML+=`<h2>Jour 1</h2><p><strong style='color:red;'>Info du Jour🗞️</strong> La DiSI CO a été <strong>parmi les premiers</strong> établissements à mettre en place l'intranet ULLO.</p>`; break;
     case 2: box.innerHTML+=`<h2>Jour 2</h2><p><strong style='color:red;'>Quiz du jour : </strong> Savez-vous par qui a été développé l'outil TaToo météo ?</p>
@@ -146,10 +250,13 @@ function checkQuiz(formId, correct, resId, infoId){
 }
 
 function checkOpenAnswer12(){
-  const v=document.getElementById('quiz12Input').value.trim();
+  const v=document.getElementById('quiz12Input').value.trim().toLowerCase();
   const r=document.getElementById('quiz12Result');
-  if(!r) return;
   if(!v) { r.textContent='Veuillez entrer une réponse.'; return; }
-  r.innerHTML='Réponse : une abeille ne produit qu\'1/12 de cuillère à café de miel, soit environ 7 grammes.';
+  if(v.includes('7') || v.includes('gram')) {
+      r.textContent='Bonne réponse ! 👍 Une abeille produit environ 7 grammes de miel.';
+  } else {
+      r.textContent='Réponse incorrecte. Une abeille produit environ 7 grammes de miel.';
+  }
 }
 </script>
