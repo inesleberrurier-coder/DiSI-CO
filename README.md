@@ -22,7 +22,6 @@
 
 <div id="popup" class="popup">
   <div id="popupContent"></div>
-</div>
 
 <script>
 // Générer les cases 1 à 24
