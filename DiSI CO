@@ -1,9 +1,8 @@
 <html lang="fr">
-<head>
 <meta charset="UTF-8">
 <title>🎄 Calendrier de l'Avent 🎄</title>
 <style>
-  body { font-family: Arial, sans-serif; background: #064E3B; color: #fff; text-align: center; margin:0; padding:20px; overflow: hidden; }
+{ font-family: Arial, sans-serif; background: #064E3B; color: #fff; text-align: center; margin:0; padding:20px; overflow: hidden; }
   h1 { margin-top: 0; font-size: 44px; color: #FFD700; text-shadow: 3px 3px 6px #000; }
   .calendar { display: grid; grid-template-columns: repeat(6, 150px); gap: 15px; justify-content: center; margin: 20px auto; max-width: 960px; }
   .day { background: #e63946; width:150px; height:150px; cursor: pointer; font-weight: bold; color: #fff; text-shadow: 1px 1px 2px #000; box-shadow: 0 6px 12px rgba(0,0,0,0.5); display:flex; align-items:center; justify-content:center; font-size:28px; position: relative; }
@@ -17,8 +16,6 @@
   .snowflake{position:fixed; top:-10px; color:white; user-select:none; pointer-events:none; z-index:1; font-size:16px; animation:fallBackground 8s linear infinite;}
   @keyframes fallBackground{0%{transform:translateY(-10px)}100%{transform:translateY(110vh)}}
 </style>
-</head>
-<body>
 
 <h1>🎄 Calendrier de l'Avent 🎄</h1>
 
