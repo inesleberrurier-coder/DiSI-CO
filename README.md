@@ -14,7 +14,6 @@
   @keyframes fallPopup{0%{transform:translateY(-10px)}100%{transform:translateY(300px)}}
   .snowflake{position:fixed; top:-10px; color:white; user-select:none; pointer-events:none; z-index:1; font-size:16px; animation:fallBackground 8s linear infinite;}
   @keyframes fallBackground{0%{transform:translateY(-10px)}100%{transform:translateY(110vh)}}
-</style>
 
 <h1>🎄 Calendrier de l'Avent 🎄</h1>
 
