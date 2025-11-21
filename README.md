@@ -87,9 +87,7 @@ function openPopup(day){
       <button type='button' onclick='checkQuiz("quiz2","Angers","res2","info2")'>Valider</button></form>
       <p id='res2'></p>
       <p id='info2' style='display:none;'>TaToo météo a été déployé à l'échelle nationale sur environ 120 000 postes entre mars et mai 2025.</p>`; break;
-    case 3: box.innerHTML+=`<h2>Jour 3</h2>
-<p><strong style='color:red;'>Info du Jour☀️<p></strong>
-Tous les ans l'ESI d'Orléans participe au Cross de Bercy. Cette année :<br>
+    case 3: box.innerHTML+=`<h2>Jour 3</h2><p><strong style='color:red;'>Info du Jour</strong> Tous les ans l'ESI d'Orléans participe au Cross de Bercy. Cette année :<br>
 🏆 Nicolas 5km 322ème<br>
 🏆 Eric 10km 630ème<br>
 🏆 Charles-Etienne 10km 127ème<br>
@@ -100,7 +98,8 @@ Tous les ans l'ESI d'Orléans participe au Cross de Bercy. Cette année :<br>
       <label><input type='radio' name='ans4' value='2'> 2</label><br>
       <label><input type='radio' name='ans4' value='3'> 3</label><br>
       <button type='button' onclick='checkQuiz("quiz4","3","res4","info4")'>Valider</button></form>
-      <p id='res4'></p>`; break;
+      <p id='res4'></p>`; 
+      break;
     case 5: box.innerHTML+=`<h2>Jour 5</h2><p>Le mois de l'innovation publique a eu pour thème l'IA.</p>
       <form id='quiz5'><label><input type='radio' name='ans5' value='1956'> 1956</label><br>
       <label><input type='radio' name='ans5' value='1962'> 1962</label><br>
