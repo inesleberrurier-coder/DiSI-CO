@@ -69,7 +69,7 @@ function openPopup(day){
       <p id='res2'></p>
       <p id='info2' style='display:none;'>Déployé sur 120 000 postes entre mars et mai 2025.</p>`; break;
 
-    case 3: box.innerHTML+=`<h2>Jour 3</h2><p><strong>🏃 Cross de Bercy :</strong><br>Nicolas 322e (5km)<br>Éric 630e (10km)<br>Charles-Étienne 127e (10km) 🎉</p>`; break;
+    case 3: box.innerHTML+=`<h2>Jour 3</h2><p><strong> Cross de Bercy🏃 :</strong><br>Nicolas 322e (5km)<br>Éric 630e (10km)<br>Charles-Étienne 127e (10km) 🎉</p>`; break;
 
     case 4: box.innerHTML+=`<h2>Jour 4</h2><p>Combien de nouveaux moutons arrivent aux Marsauderies chaque année ? 🐑</p>
       <form id='quiz4'><label><input type='radio' name='ans4' value='1'> 1</label><br>
@@ -125,8 +125,6 @@ function openPopup(day){
 
   document.getElementById('popup').style.display='block';
 }
-
-function closePopup(){ document.getElementById('popup').style.display='none'; }
 
 function checkQuiz(formId, correct, resId, infoId){
   const form=document.getElementById(formId);
