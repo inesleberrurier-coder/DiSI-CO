@@ -20,9 +20,6 @@
 
 <div class="calendar" id="calendar"></div>
 
-<div id="popup" class="popup">
-  <div id="popupContent"></div>
-
 <script>
 // Générer les cases 1 à 24
 const calendar = document.getElementById('calendar');
@@ -52,8 +49,7 @@ for(let i=1;i<=24;i++){
 // Ouvrir popup — **TOUTES LES CASES SONT OUVERTES**
 function openPopup(day){
   const box=document.getElementById('popupContent');
-  box.innerHTML='';
-
+  
   for(let i=0;i<30;i++){
     const f=document.createElement('div');
     f.className='popupSnowflake';
