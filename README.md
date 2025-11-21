@@ -1,9 +1,12 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
 <meta charset="UTF-8">
 <title>🎄 Calendrier de l'Avent 🎄</title>
 <style>
 body {
   font-family: Arial, sans-serif;
-  background: #064E3B;
+  background: #0B6623; /* fond vert */
   color: #fff;
   text-align: center;
   margin: 0;
@@ -27,12 +30,8 @@ h1 {
   max-width: 960px;
 }
 
-@media (max-width: 800px) {
-  .calendar { grid-template-columns: repeat(4, 1fr); }
-}
-@media (max-width: 500px) {
-  .calendar { grid-template-columns: repeat(2, 1fr); }
-}
+@media (max-width: 800px) { .calendar { grid-template-columns: repeat(4, 1fr); } }
+@media (max-width: 500px) { .calendar { grid-template-columns: repeat(2, 1fr); } }
 
 .day {
   background: #e63946;
@@ -48,6 +47,7 @@ h1 {
   justify-content:center;
   font-size:28px;
   position: relative;
+  transition: transform 0.2s;
 }
 
 .day::before {
@@ -57,6 +57,8 @@ h1 {
   left:5px;
   font-size:20px;
 }
+
+.day:hover { transform: scale(1.05); }
 
 .popup {
   display:none;
@@ -85,15 +87,8 @@ h1 {
   cursor:pointer;
 }
 
-input[type='text'] {
-  padding:6px;
-  width:70%;
-}
-
-a {
-  color:#064E3B;
-  font-weight:bold;
-}
+input[type='text'] { padding:6px; width:70%; }
+a { color:#064E3B; font-weight:bold; }
 
 .popupSnowflake {
   position:absolute;
@@ -105,10 +100,7 @@ a {
   animation:fallPopup 6s linear infinite;
 }
 
-@keyframes fallPopup {
-  0%{transform:translateY(-10px)}
-  100%{transform:translateY(300px)}
-}
+@keyframes fallPopup { 0%{transform:translateY(-10px)} 100%{transform:translateY(300px)} }
 
 .snowflake {
   position:fixed;
@@ -121,10 +113,7 @@ a {
   animation:fallBackground 8s linear infinite;
 }
 
-@keyframes fallBackground {
-  0%{transform:translateY(-10px)}
-  100%{transform:translateY(110vh)}
-}
+@keyframes fallBackground { 0%{transform:translateY(-10px)} 100%{transform:translateY(110vh)} }
 </style>
 </head>
 <body>
@@ -145,13 +134,13 @@ for(let i=1;i<=24;i++){
   const dayDiv = document.createElement('div');
   dayDiv.className = 'day';
   dayDiv.textContent = i;
-  dayDiv.onclick = () => openPopup(i);
+  dayDiv.onclick = () => openPopup(i); // toutes les cases cliquables
   calendar.appendChild(dayDiv);
 }
 
 // Animation neige
 (function(){
-  const count=50; // moins de flocons pour fluidité
+  const count=50;
   for(let i=0;i<count;i++){
     const el=document.createElement('div');
     el.className='snowflake';
@@ -164,7 +153,7 @@ for(let i=1;i<=24;i++){
   }
 })();
 
-// Fonction ouvrir popup (toutes les cases ouvertes)
+// Fonction ouvrir popup
 function openPopup(day){
   const box = document.getElementById('popupContent');
   box.innerHTML = '';
@@ -179,7 +168,6 @@ function openPopup(day){
     box.appendChild(f);
   }
 
-  // Contenus par jour
   switch(day){
     case 1: box.innerHTML+=`<h2>Jour 1</h2><p><strong style='color:red;'>Info du Jour🗞️</strong> La DiSI CO a été <strong>parmi les premiers</strong> établissements à mettre en place l'intranet ULLO.</p>`; break;
     case 2: box.innerHTML+=`<h2>Jour 2</h2><p><strong style='color:red;'>Quiz du jour : </strong> Savez-vous par qui a été développé l'outil TaToo météo ?</p>
@@ -237,7 +225,7 @@ function openPopup(day){
 // Fermer popup
 function closePopup(){ document.getElementById('popup').style.display='none'; }
 
-// Quiz pour jour 2,4,5,12,19
+// Quiz pour jour 2
 function checkQuiz(formId, correct, resId, infoId){
   const form=document.getElementById(formId);
   const selected=form?form.querySelector('input[type=radio]:checked'):null;
@@ -249,6 +237,7 @@ function checkQuiz(formId, correct, resId, infoId){
   if(infoId){ const el=document.getElementById(infoId); if(el) el.style.display='block'; }
 }
 
+// Quiz jour 12
 function checkOpenAnswer12(){
   const v=document.getElementById('quiz12Input').value.trim().toLowerCase();
   const r=document.getElementById('quiz12Result');
