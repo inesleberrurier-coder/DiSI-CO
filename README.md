@@ -105,7 +105,14 @@ function openPopup(day){
     <p id='info8' style='display:none;'>Le "Mois à vélo" a eu lieu en Mai, avec atelier réparation et challenge Geovelo.</p>
   `;
   break;
-    case 9: box.innerHTML+=`<h2>Jour 9</h2><p>Contenu à ajouter.</p>`; break;
+    case 9:
+  box.innerHTML += `
+    <h2>Jour 9</h2>
+    <p><strong style='color:red;'>Info du Jour 🗞️</strong></p>
+    <p>Cette année, dans le cadre du DuoDay, l'ESI de Tours a eu le plaisir d'accueillir une personne avec un TSA (trouble du spectre autistique) passionnée et intéressée par l'informatique 💻✨.</p>
+    <p>Ce moment a été rempli de joie et de partage, et nous sommes ravis d'avoir pu offrir une expérience enrichissante et chaleureuse pour tous.❤️</p>
+  `;
+  break;
     case 10:
   box.innerHTML += `
     <h2>Jour 10</h2>
