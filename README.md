@@ -91,8 +91,20 @@ function openPopup(day){
 
     case 6: box.innerHTML+=`<h2>Jour 6</h2><p><a href='https://www.marmiton.org/recettes/recette_sapin-feuillete-au-pesto_383379.aspx' target='_blank'>🌲 Sapin feuilleté au pesto</a></p>`; break;
     case 7: box.innerHTML+=`<h2>Jour 7</h2><p><a href='https://www.marmiton.org/recettes/recette_gougeres-au-fromage_20095.aspx' target='_blank'>🧀 Gougères au fromage</a></p>`; break;
-
-    case 8: box.innerHTML+=`<h2>Jour 8</h2><p>Contenu à ajouter.</p>`; break;
+    case 8:
+  box.innerHTML += `
+    <h2>Jour 8</h2>
+    <p><strong style='color:red;'>Quiz :</strong> Savez-vous quel mois a eu lieu le "Mois à vélo" ? </p>Une action avec l'ESI de Rennes et la DiSI CO, avec un atelier réparation et un challenge Geovelo ?</p>
+    <form id='quiz8'>
+      <label><input type='radio' name='ans8' value='Mai'> Mai</label><br>
+      <label><input type='radio' name='ans8' value='Juin'> Juin</label><br>
+      <label><input type='radio' name='ans8' value='Septembre'> Septembre</label><br>
+      <button type='button' onclick='checkQuiz("quiz8","Mai","res8","info8")'>Valider</button>
+    </form>
+    <p id='res8'></p>
+    <p id='info8' style='display:none;'>Le "Mois à vélo" a eu lieu en Mai, avec atelier réparation et challenge Geovelo.</p>
+  `;
+  break;
     case 9: box.innerHTML+=`<h2>Jour 9</h2><p>Contenu à ajouter.</p>`; break;
     case 10: box.innerHTML+=`<h2>Jour 10</h2><p>Contenu à ajouter.</p>`; break;
     case 11: box.innerHTML+=`<h2>Jour 11</h2><p>Contenu à ajouter.</p>`; break;
