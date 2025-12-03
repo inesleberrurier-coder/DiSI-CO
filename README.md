@@ -130,8 +130,20 @@ function openPopup(day){
     </p>
   `;
   break;
-    case 11: box.innerHTML+=`<h2>Jour 11</h2><p>Contenu à ajouter.</p>`; break;
-
+    case 11:
+  box.innerHTML += `
+    <h2>Jour 11</h2>
+    <p><strong style='color:red;'>Quiz :</strong> Savez-vous combien de stagiaires de seconde et première l'ESI de Nantes a accueillis cette année en juin ?</p>
+    <form id='quiz11'>
+      <label><input type='radio' name='ans11' value='1'> 1</label><br>
+      <label><input type='radio' name='ans11' value='5'> 5</label><br>
+      <label><input type='radio' name='ans11' value='10'> 10</label><br>
+      <button type='button' onclick='checkQuiz("quiz11","5","res11","info11")'>Valider</button>
+    </form>
+    <p id='res11'></p>
+    <p id='info11' style='display:none;'>Bravo ! L'ESI de Nantes a accueilli 5 stagiaires de seconde et première en juin. 🎉</p>
+  `;
+  break;
        case 12: box.innerHTML+=`<h2>Jour 12</h2><p><strong>En lumière :</strong> Nous avons 2 ruches aux Marsauderies pour la biodiversité 🍯🐝 et nous avons reçu des pots de miel.<p>Quiz : à votre avis, combien une abeille produit-elle de miel au cours de sa vie ? (g)</p>
       <input type="text" id="quiz12Input" placeholder="Votre réponse">
       <button type="button" onclick="checkOpenAnswer12()">Valider</button>
