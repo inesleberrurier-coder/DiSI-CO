@@ -106,7 +106,23 @@ function openPopup(day){
   `;
   break;
     case 9: box.innerHTML+=`<h2>Jour 9</h2><p>Contenu à ajouter.</p>`; break;
-    case 10: box.innerHTML+=`<h2>Jour 10</h2><p>Contenu à ajouter.</p>`; break;
+    case 10:
+  box.innerHTML += `
+    <h2>Jour 10</h2>
+    <p><strong style='color:red;'>Quiz :</strong> Savez-vous quel sport est actuellement au cœur d'un tournoi à la DiSI CO ?</p>
+    <form id='quiz10'>
+      <label><input type='radio' name='ans10' value='Fléchettes'> Fléchettes</label><br>
+      <label><input type='radio' name='ans10' value='Babyfoot'> Babyfoot</label><br>
+      <label><input type='radio' name='ans10' value='Lancer de hache'> Lancer de hache</label><br>
+      <button type='button' onclick='checkQuiz("quiz10","Babyfoot","res10","info10")'>Valider</button>
+    </form>
+    <p id='res10'></p>
+    <p id='info10' style='display:none;'>
+      Le tournoi en cours à la DiSI CO est le tournoi de Babyfoot ! 🎉<br>
+      Encore bravo à l'équipe Patators pour avoir remporté la coupe lors du dernier tournoi de Babyfoot entre la DiSI CO et l'ESI de Nantes 🏆
+    </p>
+  `;
+  break;
     case 11: box.innerHTML+=`<h2>Jour 11</h2><p>Contenu à ajouter.</p>`; break;
 
        case 12: box.innerHTML+=`<h2>Jour 12</h2><p><strong>En lumière :</strong> Nous avons 2 ruches aux Marsauderies pour la biodiversité 🍯🐝 et nous avons reçu des pots de miel.<p>Quiz : à votre avis, combien une abeille produit-elle de miel au cours de sa vie ? (g)</p>
