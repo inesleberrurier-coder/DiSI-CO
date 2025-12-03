@@ -15,8 +15,6 @@
   .snowflake{position:fixed; top:-10px; color:white; user-select:none; pointer-events:none; z-index:1; font-size:16px; animation:fallBackground 8s linear infinite;}
   @keyframes fallBackground{0%{transform:translateY(-10px)}100%{transform:translateY(110vh)}}
 </style>
-</head>
-<body>
 
 <h1>🎄 Calendrier de l'Avent 🎄</h1>
 
@@ -79,18 +77,17 @@ function openPopup(day){
 
     case 3: box.innerHTML+=`<h2>Jour 3</h2><p><strong>🏃 Cross de Bercy :</strong><br>Nicolas 322e (5km)<br>Éric 630e (10km)<br>Charles-Étienne 127e (10km) 🎉</p>`; break;
 
-    case 4: box.innerHTML+=`<h2>Jour 4</h2><p>Combien de nouveaux moutons arrivent aux Marsauderies chaque année ? 🐑</p>
+    case 4: box.innerHTML+=`<h2>Jour 4</h2><p>Le site des Marsauderies accueille chaque année des nouveaux moutons 🐑</p><strong style='color:red;'>Quiz :</strong> Combien d’agneaux la DiSI CO a eu ce printemps ?</p>
       <form id='quiz4'><label><input type='radio' name='ans4' value='1'> 1</label><br>
       <label><input type='radio' name='ans4' value='2'> 2</label><br>
       <label><input type='radio' name='ans4' value='3'> 3</label><br>
-      <button type='button' onclick='checkQuiz("quiz4","3","res4")'>Valider</button></form>
+      <button type='button' onclick='checkQuiz("quiz4","3","res4","info4")'>Valider</button></form>
       <p id='res4'></p>`; break;
-
-    case 5: box.innerHTML+=`<h2>Jour 5</h2><p>En quelle année est né le concept d'IA ?</p>
+    case 5: box.innerHTML+=`<h2>Jour 5</h2><p><strong style='color:red;'>Quiz :</strong> Le mois dernier a eu lieu le mois de l'innovation publique avec pour thème principal l'IA, savez vous en quelle année l’IA a été créée ?</p>
       <form id='quiz5'><label><input type='radio' name='ans5' value='1956'> 1956</label><br>
       <label><input type='radio' name='ans5' value='1962'> 1962</label><br>
       <label><input type='radio' name='ans5' value='1970'> 1970</label><br>
-      <button type='button' onclick='checkQuiz("quiz5","1956","res5")'>Valider</button></form><p id='res5'></p>`; break;
+      <button type='button' onclick='checkQuiz("quiz5","1956","res5","info5")'>Valider</button></form><p id='res5'></p>`; break;
 
     case 6: box.innerHTML+=`<h2>Jour 6</h2><p><a href='https://www.marmiton.org/recettes/recette_sapin-feuillete-au-pesto_383379.aspx' target='_blank'>🌲 Sapin feuilleté au pesto</a></p>`; break;
     case 7: box.innerHTML+=`<h2>Jour 7</h2><p><a href='https://www.marmiton.org/recettes/recette_gougeres-au-fromage_20095.aspx' target='_blank'>🧀 Gougères au fromage</a></p>`; break;
@@ -100,29 +97,22 @@ function openPopup(day){
     case 10: box.innerHTML+=`<h2>Jour 10</h2><p>Contenu à ajouter.</p>`; break;
     case 11: box.innerHTML+=`<h2>Jour 11</h2><p>Contenu à ajouter.</p>`; break;
 
-    case 12: box.innerHTML+=`
-      <h2>Jour 12</h2>
-      <p>Nous avons 2 ruches aux Marsauderies 🍯🐝</p>
-      <p>Combien une abeille produit-elle de miel dans sa vie ? (g)</p>
-      <input type="text" id="quiz12Input">
-      <button onclick="checkOpenAnswer12()">Valider</button>
+       case 12: box.innerHTML+=`<h2>Jour 12</h2><p><strong>En lumière :</strong> Nous avons 2 ruches aux Marsauderies pour la biodiversité 🍯🐝 et nous avons reçu des pots de miel.<p>Quiz : à votre avis, combien une abeille produit-elle de miel au cours de sa vie ? (g)</p>
+      <input type="text" id="quiz12Input" placeholder="Votre réponse">
+      <button type="button" onclick="checkOpenAnswer12()">Valider</button>
       <p id="quiz12Result"></p>`; break;
 
     case 13: box.innerHTML+=`<h2>Jour 13</h2><p><a href='https://www.marmiton.org/recettes/recette_huitres-gratinees-au-parmesan_56242.aspx' target='_blank'>🦪 Huîtres gratinées</a></p>`; break;
     case 14: box.innerHTML+=`<h2>Jour 14</h2><p><a href='https://44.kidiklik.fr/articles/335276-les-marches-de-noel-nantes-et-en-loire-atlantique.html' target='_blank'>🛍️ Marchés de Noël</a></p>`; break;
     case 15: box.innerHTML+=`<h2>Jour 15</h2><p>Relamping : néons remplacés par LED 💡</p>`; break;
     case 16: box.innerHTML+=`<h2>Jour 16</h2><p>Contenu à ajouter.</p>`; break;
-    case 17: box.innerHTML+=`<h2>Jour 17</h2><p>Concours des pulls de Noël 🎅</p>`; break;
+    case 17: box.innerHTML+=`<h2>Jour 17</h2><p><strong>Info :</strong> Concours des pulls de Noël le 15 décembre 🎅 ! Venez avec vos plus beaux pulls et gagnez vos chocolats 🍫 ! Nous prendrons une photo pour le vote final 📸.</p>`; break;
     case 18: box.innerHTML+=`<h2>Jour 18</h2><p>Contenu à ajouter.</p>`; break;
 
-    case 19: box.innerHTML+=`<h2>Jour 19</h2><p>D'où vient la tradition du pull de Noël ?</p>
-      <form id='quiz19'>
-      <label><input type='radio' name='ans19' value='France'> France</label><br>
-      <label><input type='radio' name='ans19' value='Suisse'> Suisse</label><br>
-      <label><input type='radio' name='ans19' value='Angleterre'> Angleterre</label><br>
-      <button type='button' onclick='checkQuiz("quiz19","Angleterre","res19","info19")'>Valider</button></form>
-      <p id='res19'></p>
-      <p id='info19' style='display:none;'>Tradition née en 1980.</p>`; break;
+     case 19: box.innerHTML+=`<h2>Jour 19</h2><p>🎉 Aujourd'hui, c'est la Journée mondiale du pull de Noël 🎄</p><p><strong style='color:red;'>Quiz :</strong> Savez-vous d'où vient la tradition du jour des pulls de Noël ?</p><form id='quiz19'><label><input type='radio' name='ans19' value='France'> France</label><br><label><input type='radio' name='ans19' value='Suisse'> Suisse</label><br><label><input type='radio' name='ans19' value='Angleterre'> Angleterre</label><br><button type='button' onclick='checkQuiz("quiz19","Angleterre","res19","info19")'>Valider</button></form><p id='res19'></p><p id='info19' style='display:none;'>La tradition trouve ses origines en Angleterre en 1980. Mais ce n’est que dans les années 2000 que le pull trouvera son succès grâce au film “Bridget Jones“.</p> <p>Rappel : Une photo peut être proposée dans les établissements, a la DiSI CO rendez-vous à 11h30 dans le hall des Marsauderies pour participer au concours des pulls de Noël 🎁 !</p> <hr>`;
+      `;
+  `;
+    break;
 
     case 20: box.innerHTML+=`<h2>Jour 20</h2><p><a href='https://www.marmiton.org/recettes/recette_vin-chaud-aux-epices_25224.aspx' target='_blank'>🍷 Vin chaud</a></p>`; break;
     case 21: box.innerHTML+=`<h2>Jour 21</h2><p><a href='https://www.marmiton.org/recettes/recette_gratin-dauphinois_13809.aspx' target='_blank'>🥔 Gratin dauphinois</a></p>`; break;
