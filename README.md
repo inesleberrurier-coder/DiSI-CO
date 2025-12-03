@@ -133,7 +133,7 @@ function openPopup(day){
     case 11:
   box.innerHTML += `
     <h2>Jour 11</h2>
-    <p><strong style='color:red;'>Quiz :</strong> Savez-vous combien de stagiaires de seconde et première l'ESI de Nantes a accueillis cette année en juin ?</p>
+    <p><strong style='color:red;'>Quiz :</strong> Savez-vous combien de stagiaires de seconde et première l'ESI de Rennes a accueillis cette année en juin ?</p>
     <form id='quiz11'>
       <label><input type='radio' name='ans11' value='1'> 1</label><br>
       <label><input type='radio' name='ans11' value='5'> 5</label><br>
