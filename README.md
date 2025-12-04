@@ -130,7 +130,7 @@ function openPopup(day){
     </p>
   `;
   break;
-    case 11:
+   case 11:
   box.innerHTML += `
     <h2>Jour 11</h2>
     <p><strong style='color:red;'>Quiz :</strong> Savez-vous combien de stagiaires de seconde et première l'ESI de Rennes a accueillis cette année en juin ?</p>
@@ -141,7 +141,7 @@ function openPopup(day){
       <button type='button' onclick='checkQuiz("quiz11","5","res11","info11")'>Valider</button>
     </form>
     <p id='res11'></p>
-    <p id='info11' style='display:none;'>Bravo ! L'ESI de Nantes a accueilli 5 stagiaires de seconde et première en juin. 🎉</p>
+    <p id='info11' style='display:none;'>Bravo ! L'ESI de Rennes a accueilli 5 stagiaires de seconde et première en juin. 🎉</p>
   `;
   break;
        case 12: box.innerHTML+=`<h2>Jour 12</h2><p><strong>En lumière :</strong> Nous avons 2 ruches aux Marsauderies pour la biodiversité 🍯🐝 et nous avons reçu des pots de miel.<p>Quiz : à votre avis, combien une abeille produit-elle de miel au cours de sa vie ? (g)</p>
@@ -152,7 +152,15 @@ function openPopup(day){
     case 13: box.innerHTML+=`<h2>Jour 13</h2><p><a href='https://www.marmiton.org/recettes/recette_huitres-gratinees-au-parmesan_56242.aspx' target='_blank'>🦪 Huîtres gratinées</a></p>`; break;
     case 14: box.innerHTML+=`<h2>Jour 14</h2><p><a href='https://44.kidiklik.fr/articles/335276-les-marches-de-noel-nantes-et-en-loire-atlantique.html' target='_blank'>🛍️ Marchés de Noël</a></p>`; break;
     case 15: box.innerHTML+=`<h2>Jour 15<p><strong style='color:red;'>Info du Jour<p></strong></h2><p>Relamping du couloir du rez-de-chaussée :<p></strong> les néons ont été remplacés par des panneaux LED💡 Cette démarche s'inscrit dans la politique <strong>ÉcoFiP</strong> de la direction<p>une vraie action écologique : réduction de la consommation électrique et moins de déchets.</p>`; break;
-    case 16: box.innerHTML+=`<h2>Jour 16</h2><p>Contenu à ajouter.</p>`; break;
+    case 16:
+  box.innerHTML += `
+    <h2>Jour 16</h2>
+    <p><strong style='color:red;'>Info du Jour 🗞️</strong></p>
+    <p>Un immense bravo à tous les agents qui ont participé aux salons étudiants cette année ! 👏✨</p>
+    <p>Grâce à leur énergie, leur disponibilité et leur bonne humeur, ils ont brillamment représenté nos équipes et ont permis à de nombreux jeunes de découvrir nos métiers et nos missions. 🌟</p>
+    <p>Merci à eux pour leur engagement et leur enthousiasme ! ❤️</p>
+  `;
+  break;
     case 17: box.innerHTML+=`<h2>Jour 17</h2><p><strong>Info :</strong> Concours des pulls de Noël le 15 décembre 🎅 ! <p>Venez avec vos plus beaux pulls et gagnez vos chocolats 🍫 ! <p>Nous prendrons une photo pour le vote final 📸.</p>`; break;
     case 18: box.innerHTML+=`<h2>Jour 18</h2><p>Contenu à ajouter.</p>`; break;
 
