@@ -162,8 +162,25 @@ function openPopup(day){
   `;
   break;
     case 17: box.innerHTML+=`<h2>Jour 17</h2><p><strong>Info :</strong> Concours des pulls de Noël le 15 décembre 🎅 ! <p>Venez avec vos plus beaux pulls et gagnez vos chocolats 🍫 ! <p>Nous prendrons une photo pour le vote final 📸.</p>`; break;
-    case 18: box.innerHTML+=`<h2>Jour 18</h2><p>Contenu à ajouter.</p>`; break;
+   case 18:
+  box.innerHTML += `
+    <h2>Jour 18</h2>
+    <p><strong style='color:red;'>Quiz :</strong> Savez-vous dans combien de ministères l’ESI de Tours a mis en place la PSC cette année sur PAYSAGE ?</p>
 
+    <form id='quiz18'>
+      <label><input type='radio' name='ans18' value='1'> 1 ministère</label><br>
+      <label><input type='radio' name='ans18' value='2'> 2 ministères</label><br>
+      <label><input type='radio' name='ans18' value='3'> 3 ministères</label><br>
+      <button type='button' onclick='checkQuiz("quiz18","3","res18","info18")'>Valider</button>
+    </form>
+
+    <p id='res18'></p>
+    <p id='info18' style='display:none;'>
+      Bravo 🎉 L’ESI de Tours a bien déployé la PSC dans <strong>3 ministères</strong> : Agriculture, Environnement et Services du Premier Ministre.  
+      Une très belle réussite pour nos équipes ! 🌟
+    </p>
+  `;
+  break;
      case 19: box.innerHTML+=`<h2>Jour 19</h2><p>🎉 Aujourd'hui, c'est la Journée mondiale du pull de Noël 🎄</p><p><strong style='color:red;'>Quiz :</strong> Savez-vous d'où vient la tradition du jour des pulls de Noël ?</p><form id='quiz19'><label><input type='radio' name='ans19' value='France'> France</label><br><label><input type='radio' name='ans19' value='Suisse'> Suisse</label><br><label><input type='radio' name='ans19' value='Angleterre'> Angleterre</label><br><button type='button' onclick='checkQuiz("quiz19","Angleterre","res19","info19")'>Valider</button></form><p id='res19'></p><p id='info19' style='display:none;'>La tradition trouve ses origines en Angleterre en 1980. Mais ce n’est que dans les années 2000 que le pull trouvera son succès grâce au film “Bridget Jones“.</p> <p>Rappel : Une photo peut être proposée dans les établissements, a la DiSI CO rendez-vous à 11h30 dans le hall des Marsauderies pour participer au concours des pulls de Noël 🎁 !</p> <hr>`;
       `;
   `;
