@@ -161,11 +161,11 @@ function openPopup(day){
     <p>Merci à eux pour leur engagement et leur enthousiasme ! ❤️</p>
   `;
   break;
-    case 17: box.innerHTML+=`<h2>Jour 17</h2><p><strong>Info :</strong> Concours des pulls de Noël le 15 décembre 🎅 ! <p>Venez avec vos plus beaux pulls et gagnez vos chocolats 🍫 ! <p>Nous prendrons une photo pour le vote final 📸.</p>`; break;
+    case 17: box.innerHTML+=`<h2>Jour 17</h2><p><strong>Info :</strong> Concours des pulls de Noël le 19 décembre 🎅 ! <p>Venez avec votre plus beau pull de Noël et gagnez des chocolats 🍫 ! <p>Nous prendrons une photo pour le vote final 📸.</p>`; break;
    case 18:
   box.innerHTML += `
     <h2>Jour 18</h2>
-    <p><strong style='color:red;'>Quiz :</strong> Savez-vous dans combien de ministères l’ESI de Tours a mis en place la PSC cette année sur PAYSAGE ?</p>
+    <p><strong style='color:red;'>Quiz :</strong> Savez-vous dans combien de ministères l’ESI de Tours a mis en place la PSC (Protection Sociale Complémentaire) cette année sur PAYSAGE ?</p>
 
     <form id='quiz18'>
       <label><input type='radio' name='ans18' value='1'> 1 ministère</label><br>
@@ -193,9 +193,7 @@ function openPopup(day){
     case 24:
   box.innerHTML += `
     <h2>Jour 24</h2>
-    <p><strong style='color:red;'>🎄 Bonne fête à tous ! 🎄</strong></p>
-
-    <p>Profitez pleinement de cette période, reposez-vous, amusez-vous et passez de merveilleux moments en famille ou entre amis. ✨</p>
+    <p><strong style='color:red;'>🎄 Bonne fête de fin d'année à tous ! 🎄</strong></p>
 
     <p>Un grand merci à toutes celles et ceux qui ont rejoint la DiSI et ses établissements au cours de l’année. Nous sommes ravis de vous compter parmi nous, et bravo pour votre engagement au quotidien ! ❤️</p>
 
