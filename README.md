@@ -188,7 +188,18 @@ function openPopup(day){
 
     case 20: box.innerHTML+=`<h2>Jour 20</h2><p><a href='https://www.marmiton.org/recettes/recette_vin-chaud-aux-epices_25224.aspx' target='_blank'>🍷 Vin chaud</a></p>`; break;
     case 21: box.innerHTML+=`<h2>Jour 21</h2><p><a href='https://www.marmiton.org/recettes/recette_gratin-dauphinois_13809.aspx' target='_blank'>🥔 Gratin dauphinois</a></p>`; break;
-    case 22: box.innerHTML+=`<h2>Jour 22</h2><p>Contenu à ajouter.</p>`; break;
+    case 22:
+box.innerHTML += `
+<h2>Jour 22</h2>
+<p><strong style='color:red;'>Quiz du Jour ❓📞</strong></p>
+<p>Savez-vous quel site a été le dernier à basculer à la <strong>ToIP</strong> en Indre-et-Loire ?</p>
+<ul>
+<li>A : Le site <strong>Béranger</strong> à Tours</li>
+<li>B : Le site <strong>Coulongé</strong></li>
+</ul>
+<p><em>Réponse : A 🎉 Bravo aux équipes de l’ESI de Tours pour cette belle avancée technique ! 🚀</em></p>
+`;
+break;
     case 23: box.innerHTML+=`<h2>Jour 23</h2><p>Contenu à ajouter.</p>`; break;
     case 24:
   box.innerHTML += `
