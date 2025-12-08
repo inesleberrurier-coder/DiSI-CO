@@ -205,21 +205,51 @@ break;
   case 24:
   box.innerHTML += `
     <h2>Jour 24</h2>
-    <p><strong>Message de la Directrice </strong></p>
-    <p>
-      Je vous souhaite de très joyeuses fêtes de fin d’année, pleines de joie,
-      de sérénité et de beaux moments partagés.
-    </p>
-    <p>
-      Je remercie chaleureusement toutes les personnes ayant rejoint la DiSI
-      et ses établissements au cours de cette année.
-    </p>
-    <p>
-      Merci à toutes et à tous pour votre engagement.
-    </p>
+
+    <div style="position:relative; padding:15px; border:2px solid #c62828; border-radius:12px; background:#fff; color:#111; overflow:hidden;">
+
+      <p><strong>Message de la Directrice</strong></p>
+      <p>
+        Je vous souhaite de très joyeuses fêtes de fin d’année, pleines de joie,
+        de sérénité et de beaux moments partagés.
+      </p>
+      <p>
+        Je remercie chaleureusement toutes les personnes ayant rejoint la DiSI
+        et ses établissements au cours de cette année.
+      </p>
+      <p>
+        Merci à toutes et à tous pour votre engagement.
+      </p>
+
+      <!-- Cotillons -->
+      <div class="confetti-container">
+        <div class="confetti" style="left:10%; background:#e63946;"></div>
+        <div class="confetti" style="left:25%; background:#f1c40f;"></div>
+        <div class="confetti" style="left:40%; background:#4caf50;"></div>
+        <div class="confetti" style="left:55%; background:#2196f3;"></div>
+        <div class="confetti" style="left:70%; background:#ff9800;"></div>
+        <div class="confetti" style="left:85%; background:#9c27b0;"></div>
+      </div>
+
+      <style>
+        .confetti-container { position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; overflow:hidden; }
+        .confetti {
+          position:absolute;
+          width:6px;
+          height:12px;
+          opacity:0.9;
+          animation: fall 3s linear infinite;
+        }
+        .confetti:nth-child(odd) { animation-duration:2.5s; }
+        .confetti:nth-child(even) { animation-duration:3.5s; }
+
+        @keyframes fall {
+          0% { top:-10px; transform:rotate(0deg); }
+          100% { top:120%; transform:rotate(360deg); }
+        }
+      </style
   `;
   break;
-  
   }
 
   document.getElementById('popup').style.display='block';
