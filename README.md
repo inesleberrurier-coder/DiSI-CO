@@ -201,17 +201,59 @@ box.innerHTML += `
 `;
 break;
     case 23: box.innerHTML+=`<h2>Jour 23</h2><p>Contenu à ajouter.</p>`; break;
-    case 24:
-  box.innerHTML += `
+   case 24: box.innerHTML += `
     <h2>Jour 24</h2>
-    <p><strong style='color:red;'>🎄 Bonne fête de fin d'année à tous ! 🎄</strong></p>
 
-    <p>Un grand merci à toutes celles et ceux qui ont rejoint la DiSI et ses établissements au cours de l’année. Nous sommes ravis de vous compter parmi nous, et bravo pour votre engagement au quotidien ! ❤️</p>
+    <div style="
+      text-align:center;
+      padding:15px;
+      border:2px solid #c62828;
+      border-radius:15px;
+      background:#fff;
+      position:relative;
+      overflow:hidden;
+    ">
 
-    <p><strong>PS :</strong> N’oubliez pas… aujourd’hui, c’est aussi l’anniversaire de <strong>Christophe Marionneau</strong> 🎂🥳  
-    Pensez à lui souhaiter ! 😉</p>
+      <p style="font-size:20px;font-weight:bold;">🎄 Message de fin d’année 🎄</p>
+
+      <p>
+        Je vous souhaite de très joyeuses fêtes de fin d’année, qu’elles soient
+        remplies de joie, de sérénité et de moments précieux auprès de vos proches.
+      </p>
+
+      <p>
+        Je remercie chaleureusement toutes les personnes ayant rejoint la DiSI
+        et ses établissements au cours de cette année pour leur engagement et leur implication.
+      </p>
+
+      <p style="font-style:italic;margin-top:10px;">
+        — La Directrice
+      </p>
+
+      <div id="confetti24"></div>
+    </div>
+
+    <script>
+      const colors24 = ['#e63946','#ffd166','#06d6a0','#118ab2','#ef476f'];
+
+      const container24 = document.getElementById('confetti24');
+
+      for(let i=0;i<50;i++){
+        const c = document.createElement('div');
+        c.style.position = 'absolute';
+        c.style.width = '6px';
+        c.style.height = '6px';
+        c.style.borderRadius = '2px';
+        c.style.backgroundColor = colors24[Math.floor(Math.random()*colors24.length)];
+        c.style.left = Math.random()*100 + '%';
+        c.style.top = '-10px';
+        c.style.animation = 'fall 3s linear infinite';
+        container24.appendChild(c);
+      }
+    </script>
   `;
   break;
+
   }
 
   document.getElementById('popup').style.display='block';
