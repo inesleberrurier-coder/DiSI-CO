@@ -200,60 +200,26 @@ box.innerHTML += `
 <p><em>Réponse : A 🎉 Bravo aux équipes de l’ESI de Tours pour cette belle avancée technique ! 🚀</em></p>
 `;
 break;
-    case 23: box.innerHTML+=`<h2>Jour 23</h2><p>Contenu à ajouter.</p>`; break;
-   case 24: box.innerHTML += `
+    case 23: box.innerHTML+=`<h2>Jour 23</h2><p>Contenu à ajouter.</p>`; 
+break;
+  case 24:
+  box.innerHTML += `
     <h2>Jour 24</h2>
-
-    <div style="
-      text-align:center;
-      padding:15px;
-      border:2px solid #c62828;
-      border-radius:15px;
-      background:#fff;
-      position:relative;
-      overflow:hidden;
-    ">
-
-      <p style="font-size:20px;font-weight:bold;">🎄 Message de fin d’année 🎄</p>
-
-      <p>
-        Je vous souhaite de très joyeuses fêtes de fin d’année, qu’elles soient
-        remplies de joie, de sérénité et de moments précieux auprès de vos proches.
-      </p>
-
-      <p>
-        Je remercie chaleureusement toutes les personnes ayant rejoint la DiSI
-        et ses établissements au cours de cette année pour leur engagement et leur implication.
-      </p>
-
-      <p style="font-style:italic;margin-top:10px;">
-        — La Directrice
-      </p>
-
-      <div id="confetti24"></div>
-    </div>
-
-    <script>
-      const colors24 = ['#e63946','#ffd166','#06d6a0','#118ab2','#ef476f'];
-
-      const container24 = document.getElementById('confetti24');
-
-      for(let i=0;i<50;i++){
-        const c = document.createElement('div');
-        c.style.position = 'absolute';
-        c.style.width = '6px';
-        c.style.height = '6px';
-        c.style.borderRadius = '2px';
-        c.style.backgroundColor = colors24[Math.floor(Math.random()*colors24.length)];
-        c.style.left = Math.random()*100 + '%';
-        c.style.top = '-10px';
-        c.style.animation = 'fall 3s linear infinite';
-        container24.appendChild(c);
-      }
-    </script>
+    <p><strong>Message de la Directrice </strong></p>
+    <p>
+      Je vous souhaite de très joyeuses fêtes de fin d’année, pleines de joie,
+      de sérénité et de beaux moments partagés.
+    </p>
+    <p>
+      Je remercie chaleureusement toutes les personnes ayant rejoint la DiSI
+      et ses établissements au cours de cette année.
+    </p>
+    <p>
+      Merci à toutes et à tous pour votre engagement.
+    </p>
   `;
   break;
-
+  
   }
 
   document.getElementById('popup').style.display='block';
