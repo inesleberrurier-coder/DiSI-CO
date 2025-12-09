@@ -205,12 +205,13 @@ function openPopup(day){
         Le site de <strong>Coulongé</strong>
       </label><br><br>
 
-      <button type="button" onclick="checkQuiz('quiz22','Beranger','res22')">Valider</button>
+      <button type="button" onclick="checkQuiz22()">Valider</button>
     </form>
 
     <p id="res22" style="font-weight:bold; margin-top:10px;"></p>
-
-    <p style="margin-top:10px;">🎉 Bravo aux équipes de l’ESI de Tours pour cette belle avancée !</p>
+    <p id="info22" style="display:none; margin-top:10px;">
+      🎉 Bravo aux équipes de l’ESI de Tours pour cette belle avancée !
+    </p>
   `;
   break;
 
