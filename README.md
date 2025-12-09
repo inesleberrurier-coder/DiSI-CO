@@ -196,12 +196,12 @@ function openPopup(day){
 
     <form id="quiz22">
       <label>
-        <input type="radio" name="ans22" value="Beranger">
+        <input type="radio" name="ans22" value="Béranger">
         Le site de <strong>Béranger</strong> (Tours)
       </label><br>
 
       <label>
-        <input type="radio" name="ans22" value="Coulenge">
+        <input type="radio" name="ans22" value="Coulongé">
         Le site de <strong>Coulongé</strong>
       </label><br><br>
 
