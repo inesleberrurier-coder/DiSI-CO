@@ -192,25 +192,22 @@ function openPopup(day){
     <h2>Jour 22</h2>
     <p><strong style="color:red;">Quiz du jour ❓📞</strong></p>
 
-    <p>Savez-vous combien de sites ont basculé vers la <strong>portabilité ToIP</strong> cette année&nbsp;?</p>
+    <p>Savez-vous combien de sites ont basculé vers la portabilité <strong>ToIP</strong> cette année&nbsp;?</p>
 
     <form id="quiz22">
       <label>
-        <input type="radio" name="ans22" value="19">
-        19
+        <input type="radio" name="ans22" value="19"> 19
       </label><br>
 
       <label>
-        <input type="radio" name="ans22" value="21">
-        21
+        <input type="radio" name="ans22" value="21"> 21
       </label><br>
 
       <label>
-        <input type="radio" name="ans22" value="28">
-        28
+        <input type="radio" name="ans22" value="28"> 28
       </label><br><br>
 
-      <button type="button" onclick="checkQuiz22()">Valider</button>
+      <button type="button" onclick="checkQuiz('quiz22','19','res22')">Valider</button>
     </form>
 
     <p id="res22" style="font-weight:bold; margin-top:10px;"></p>
