@@ -161,7 +161,7 @@ function openPopup(day){
     <p>Merci à eux pour leur engagement et leur enthousiasme ! ❤️</p>
   `;
   break;
-    case 17: box.innerHTML+=`<h2>Jour 17</h2><p><strong>Info :</strong> Concours des pulls de Noël le 19 décembre 🎅 ! <p>Venez avec votre plus beau pull de Noël et gagnez des chocolats 🍫 ! <p>A la DiSI nous prendrons une photo a 11H30 dans le hall des marsauderies pour le vote final 📸.</p>`; break;
+    case 17: box.innerHTML+=`<h2>Jour 17</h2><p><strong>Info :</strong> Concours des pulls de Noël le 19 décembre 🎅 ! <p>Venez avec votre plus beau pull de Noël et gagnez des chocolats 🍫 ! <p>A la DiSI nous prendrons une photo a 11H30 dans le hall des Marsauderies pour le vote final 📸.</p>`; break;
    case 18:
   box.innerHTML += `
     <h2>Jour 18</h2>
