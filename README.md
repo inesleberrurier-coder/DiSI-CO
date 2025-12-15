@@ -219,22 +219,19 @@ break;
   case 24:
   box.innerHTML += `
     <h2>Jour 24</h2>
-    <h3 style="color:#c62828; margin-top:5px;">Message de la Directrice</h3>
 
     <div style="position:relative; padding:15px; border:2px solid #c62828; border-radius:12px; background:#fff; color:#111; overflow:hidden;">
 
-      <p>Chers collègues,</p>
-
+      <p><strong>Message de la Directrice</strong></p>
       <p>
-        Merci pour votre engagement et votre professionnalisme au quotidien.
-        C’est grâce à chacun d’entre vous que le système d’information apporte,
-        chaque jour, à nos collègues, nos partenaires et nos usagers,
-        ce dont ils ont le plus besoin : un environnement numérique et
-        d’assistance de qualité, disponible, efficace et sécurisé.
+        Chers collègues,
+Merci pour votre engagement et votre professionnalisme au quotidien.
       </p>
-
       <p>
-        Je vous souhaite à toutes et à tous de très belles fêtes de fin d’année.
+        C'est grâce à chacun d’entre vous que le système d’information apporte, chaque jour, à nos collègues, nos partenaires et nos usagers, ce dont ils ont le plus besoin : un environnement numérique et d’assistance de qualité, disponible, efficace et sécurisé. Bravo.
+      </p>
+      <p>
+       Je vous souhaite à toutes et à tous de très belles fêtes de fin d’année.
       </p>
 
       <!-- Cotillons -->
@@ -242,32 +239,26 @@ break;
         <div class="confetti" style="left:10%; background:#e63946;"></div>
         <div class="confetti" style="left:25%; background:#f1c40f;"></div>
         <div class="confetti" style="left:40%; background:#4caf50;"></div>
-        <div class="confetti" style="left:55%; background:#219س6f3;"></div>
+        <div class="confetti" style="left:55%; background:#2196f3;"></div>
         <div class="confetti" style="left:70%; background:#ff9800;"></div>
         <div class="confetti" style="left:85%; background:#9c27b0;"></div>
       </div>
 
       <style>
-        .confetti-container{
-          position:absolute;
-          top:0; left:0;
-          width:100%; height:100%;
-          pointer-events:none;
-          overflow:hidden;
-        }
-        .confetti{
+        .confetti-container { position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; overflow:hidden; }
+        .confetti {
           position:absolute;
           width:6px;
-          height:10px;
-          animation: fall 3s linear infinite;
+          height:12px;
           opacity:0.9;
+          animation: fall 3s linear infinite;
         }
-        .confetti:nth-child(odd){ animation-duration:2.5s; }
-        .confetti:nth-child(even){ animation-duration:3.5s; }
+        .confetti:nth-child(odd) { animation-duration:2.5s; }
+        .confetti:nth-child(even) { animation-duration:3.5s; }
 
         @keyframes fall {
-          from { top:-10px; transform:rotate(0deg); }
-          to { top:120%; transform:rotate(360deg); }
+          0% { top:-10px; transform:rotate(0deg); }
+          100% { top:120%; transform:rotate(360deg); }
         }
       </style
   `;
