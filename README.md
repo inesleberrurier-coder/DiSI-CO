@@ -233,7 +233,7 @@ function openPopup(day){
         <input type="radio" name="ans23" value="14"> 14
       </label><br><br>
 
-      <button type="button" onclick="checkQuiz('quiz23','12','res23')">Valider</button>
+      <button type="button" onclick="checkQuiz('quiz23','14','res23')">Valider</button>
     </form>
 
     <p id="res23" style="font-weight:bold; margin-top:10px;"></p>
