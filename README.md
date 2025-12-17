@@ -213,9 +213,32 @@ function openPopup(day){
     <p id="res22" style="font-weight:bold; margin-top:10px;"></p>
   `;
   break;
+    case 23:
+  box.innerHTML += `
+    <h2>Jour 23</h2>
+    <p><strong style="color:red;">Quiz du jour ❓🎓</strong></p>
 
-    case 23: box.innerHTML+=`<h2>Jour 23</h2><p>Contenu à ajouter.</p>`; 
-break;
+    <p>Savez-vous combien d’<strong>apprentis</strong> ont été accueillis dans nos établissements en <strong>2025</strong>&nbsp;?</p>
+
+    <form id="quiz23">
+      <label>
+        <input type="radio" name="ans23" value="8"> 8
+      </label><br>
+
+      <label>
+        <input type="radio" name="ans23" value="12"> 12
+      </label><br>
+
+      <label>
+        <input type="radio" name="ans23" value="14"> 14
+      </label><br><br>
+
+      <button type="button" onclick="checkQuiz('quiz23','12','res23')">Valider</button>
+    </form>
+
+    <p id="res23" style="font-weight:bold; margin-top:10px;"></p>
+  `;
+  break;
   case 24:
   box.innerHTML += `
     <h2>Jour 24</h2>
